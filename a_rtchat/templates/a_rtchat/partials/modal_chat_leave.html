@@ -1,0 +1,22 @@
+{% comment %} <div x-data="{ modal_open: false }">
+    <!-- Trigger button -->
+    <button @click="modal_open = true" class="button button-gray ml-1 cursor-pointer">
+        Leave Chat
+    </button>
+
+    <!-- Modal -->
+    <div x-show="modal_open" x-cloak class="fixed inset-0 bg-gray-800 bg-opacity-80 z-50 flex items-center justify-center">
+        <div @click.away="modal_open = false" class="rounded-lg bg-white text-left shadow-xl p-6 w-full max-w-md">
+            
+            <h1 class="text-xl font-bold mb-4">Leave this chat?</h1>
+
+            <form method="POST" action="{% url 'chatroom-leave' chat_group.group_name %}">
+                {% csrf_token %}
+                <div class="flex justify-end space-x-2">
+                    <button type="submit" class="button-red">Yes, I want to leave</button>
+                    <button type="button" class="button button-gray" @click="modal_open = false">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div> {% endcomment %}
