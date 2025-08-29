@@ -1,13 +1,5 @@
 
 
-#### Getting the files
-Download zip file<br> 
-or <br>
-git clone command (need git to be installed) and remove git folder afterwards
-```
-git clone https://github.com/andyjud/django-starter.git . && rm -rf .git
-```
-<br><br><br>
 
 ## Setup
 
@@ -53,7 +45,7 @@ python manage.py runserver
 
 <br>
 
-#### - Generate Secret Key ( ! Important for deployment ! )
+#### - Generate Secret Key 
 ```
 python manage.py shell
 from django.core.management.utils import get_random_secret_key
